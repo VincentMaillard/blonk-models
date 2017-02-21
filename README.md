@@ -44,8 +44,8 @@ gulp
 # compile to ES5
 1. yarn build
 
-# upload dist/ to your server
-2. scp -rp dist/ user@dest:/path
+# upload lib/ to your server
+2. scp -rp lib/ user@dest:/path
 
 # install production dependencies only
 3. yarn --production
