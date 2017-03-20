@@ -15,7 +15,7 @@ import mongoose from 'mongoose';
 const Blonk = {
 	version: '1.0.0'
 };
-mongoose.connect( 'mongodb://localhost:4001/meteor', {
+mongoose.connect( 'mongodb://blonk-prod:bl0nk4dm1n@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/blonk-prod?replicaSet=set-57b639ab08173fe483000b6f;passenger_env_var MONGO_OPLOG_URL mongodb://blonk-prod:bl0nk4dm1n@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/local?authSource=blonk-prod&replicaSet=set-57b639ab08173fe483000b6f;', {
 	server: {
 		socketOptions: {
 			keepAlive: 1
