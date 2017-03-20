@@ -15,15 +15,15 @@ import mongoose from 'mongoose';
 const Blonk = {
 	version: '1.0.0'
 };
-mongoose.connect( 'mongodb://blonk-prod:bl0nk4dm1n@alcatraz.1.mongolayer.com:10346', {
+mongoose.connect( 'mongodb://blonk-prod:bl0nk4dm1n@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/blonk-prod?ssl=true', {
 	server: {
 		socketOptions: {
 			keepAlive: 1
 		}
 	}
 } );
-mongoose.connection.on( 'error', () => {
-	throw new Error( `unable to connect to database: ` );
+mongoose.connection.on( 'error', ( e ) => {
+	throw new Error( `unable to connect to database:${e} ` );
 } );
 export {
 	CandidateListing,
