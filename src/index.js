@@ -15,7 +15,7 @@ import mongoose from 'mongoose';
 const Blonk = {
 	version: '1.0.0'
 };
-mongoose.connect( 'mongodb://blonk-prod:bl0nk4dm1n@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/blonk-prod?ssl=true', {
+mongoose.connect( 'mongodb://blonk-staging-bo:Bl0nkSt4g1ngB0@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/blonk-staging-back-office?replicaSet=set-57b639ab08173fe483000b6f', {
 	server: {
 		socketOptions: {
 			keepAlive: 1
