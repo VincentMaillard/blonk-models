@@ -1,6 +1,6 @@
 {
     "name": "blonk-models",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Blonk core models",
     "main": "lib/index.js",
     "scripts": {
