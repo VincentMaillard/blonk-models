@@ -22,6 +22,7 @@ const MatchSchema = new mongoose.Schema({
 	recruiterAction: String,
 	candidateAction: String,
 	candidateProfileCompleted: Boolean,
+	bypass:Boolean,
 	updatedAt: { type: Date, default: Date.now }
 
 });

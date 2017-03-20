@@ -46,7 +46,7 @@ ContractTypeSchema.method({
               return Promise.reject(err);
             })
    },
-   list({ skip = 0, limit = 50 } = {}){
+   list({ skip = 0, limit = 100 } = {}){
         return this.find()
                 .skip(skip)
                 .limit(limit)
