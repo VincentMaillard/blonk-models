@@ -24,19 +24,13 @@ mongoose.createConnection( process.env.MONGO_URL, {
 		}
 	}
 } );
-Blonk.connect = ( url = process.env.MONGO_URL ) => {
-	mongoose.createConnection( url, {
-		server: {
-			socketOptions: {
-				keepAlive: 1
-			}
-		}
-	} );
-	mongoose.connection.on( 'error', ( e ) => {
-		throw new Error( `unable to connect to database:${e} ` );
-	} );
 
-}
+
+mongoose.connection.on( 'error', ( e ) => {
+	throw new Error( `unable to connect to database:${e} ` );
+} );
+
+
 
 
 
@@ -51,6 +45,5 @@ export {
 	Match,
 	Region,
 	Salary,
-	User,
-	Blonk
+	User
 };
