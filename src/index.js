@@ -10,12 +10,14 @@ import Region from './models/region.model';
 import Salary from './models/salary.model';
 import User from './models/user.model';
 import mongoose from 'mongoose';
+import config from '../config/env';
 
-
+process.env.MONGO_URL = config.db;
+console.log( process.env.MONGO_URL );
 const Blonk = {
 	version: '1.0.0'
 };
-mongoose.createConnection( 'mongodb://blonk-staging-bo:Bl0nkSt4g1ngB0@alcatraz.1.mongolayer.com:10346,alcatraz.0.mongolayer.com:10346/blonk-staging-back-office?replicaSet=set-57b639ab08173fe483000b6f', {
+mongoose.connect( process.env.MONGO_URL, {
 	server: {
 		socketOptions: {
 			keepAlive: 1
