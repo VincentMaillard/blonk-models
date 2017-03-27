@@ -17,7 +17,7 @@ console.log( process.env.MONGO_URL );
 const Blonk = {
 	version: '1.0.0'
 };
-mongoose.connect( process.env.MONGO_URL, {
+mongoose.createConnection( process.env.MONGO_URL, {
 	server: {
 		socketOptions: {
 			keepAlive: 1
